@@ -28,13 +28,24 @@ DATABASE_URL="postgresql://사용자명:비밀번호@호스트:포트/데이터�
 ```
 
 **예시:**
+
 ```env
-# 로컬 PostgreSQL인 경우
+# 로컬 PostgreSQL인 경우 (기본 스키마: public)
 DATABASE_URL="postgresql://postgres:your_password@localhost:5432/todolist_db"
+
+# 특정 스키마를 지정하는 경우
+DATABASE_URL="postgresql://postgres:your_password@localhost:5432/todolist_db?schema=my_schema"
 
 # DBeaver에서 생성한 원격 데이터베이스인 경우
 DATABASE_URL="postgresql://username:password@your_host:5432/todolist_db"
 ```
+
+**스키마 지정 방법:**
+
+- PostgreSQL의 기본 스키마는 `public`입니다.
+- 다른 스키마를 사용하려면 `?schema=스키마명`을 URL 끝에 추가하세요.
+- 예: `?schema=my_schema` 또는 `?schema=custom_schema`
+- 여러 파라미터를 사용할 경우: `?schema=my_schema&sslmode=require`
 
 ### 4단계: Prisma Client 생성
 
@@ -54,6 +65,7 @@ Prisma를 사용하는 경우, Prisma Migrate를 사용하는 것이 더 안전�
 ### 1단계: 데이터베이스 생성
 
 DBeaver에서 데이터베이스를 생성합니다:
+
 ```sql
 CREATE DATABASE todolist_db;
 ```
@@ -70,6 +82,7 @@ npx prisma migrate dev --name init
 ```
 
 이 명령어는:
+
 - `schema.prisma` 파일을 기반으로 데이터베이스에 테이블을 생성합니다.
 - 마이그레이션 파일을 생성합니다.
 - Prisma Client를 자동으로 생성합니다.
@@ -97,12 +110,14 @@ npx prisma studio
 ### 테이블이 이미 존재하는 경우
 
 SQL 스크립트는 기존 테이블을 삭제하고 다시 생성합니다. 데이터를 보존하려면:
+
 - 방법 2 (Prisma Migrate)를 사용하거나
 - SQL 스크립트에서 `DROP TABLE` 부분을 제거하세요.
 
 ### Prisma Client 오류
 
 다음 명령어로 Prisma Client를 재생성하세요:
+
 ```bash
 npx prisma generate
 ```
@@ -112,10 +127,11 @@ npx prisma generate
 ## 데이터베이스 구조
 
 생성되는 테이블:
+
 - **todos**: 할 일 목록 (id, title, description, date, completed, created_at, updated_at)
 - **subtasks**: 하위 작업 목록 (id, title, completed, todo_id)
 - **dogs**: 개 정보 (id, name, breed, age)
 
 관계:
-- `subtasks.todo_id` → `todos.id` (CASCADE 삭제)
 
+- `subtasks.todo_id` → `todos.id` (CASCADE 삭제)
