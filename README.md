@@ -281,6 +281,16 @@ ToDoList/
 - `subtasks.todo_id`가 `todos.id`를 참조
 - Todo 삭제 시 연관된 서브태스크는 CASCADE로 자동 삭제
 
+**backend/.env**
+```
+# Database
+DATABASE_URL=
+
+# Server
+PORT=
+NODE_ENV=
+```
+
 ### 프로젝트 과정 중 발생한 트러블 슈팅
 
 #### 1. Optimistic UI 구현 시 동기화 문제
