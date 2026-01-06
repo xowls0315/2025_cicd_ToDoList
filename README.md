@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # 📝 ToDoList 프로젝트
 
 **한 줄 요약**: Next.js와 Express를 활용한 현대적인 Todo 관리 웹 애플리케이션
@@ -12,7 +10,7 @@
 
 ---
 
-## 01. 프로젝트 소개
+## 01. 프로젝트 소개 📋
 
 ### 프로젝트의 목적 및 개요
 
@@ -38,7 +36,7 @@ ToDoList는 일상적인 업무와 일정을 효율적으로 관리할 수 있�
 
 ---
 
-## 02. 프로젝트 주요 기능
+## 02. 프로젝트 주요 기능 🎯
 
 ### 핵심 기능 설명
 
@@ -83,13 +81,9 @@ ToDoList는 일상적인 업무와 일정을 효율적으로 관리할 수 있�
 - 헤더에 현재 시간 표시
 - 1초 단위로 업데이트
 
-### 스크린샷
-
-> 💡 **참고**: 실제 스크린샷이나 GIF를 추가하여 프로젝트를 더 직관적으로 소개할 수 있습니다.
-
 ---
 
-## 03. 프로젝트 기술 스택
+## 03. 프로젝트 기술 스택 🛠️
 
 ### 프론트엔드
 
@@ -123,7 +117,7 @@ ToDoList는 일상적인 업무와 일정을 효율적으로 관리할 수 있�
 
 ---
 
-## 04. 프로젝트 설치 방법
+## 04. 프로젝트 설치 방법 💻
 
 ### 사전 요구사항
 
@@ -202,7 +196,7 @@ npm start
 
 ---
 
-## 05. 기타
+## 05. 기타 📚
 
 ### 프로젝트 구조
 
@@ -369,12 +363,17 @@ setTodos((prev) => [optimisticTodo, ...prev]);
 
 ---
 
-## 라이선스
+## 06. 실행 화면 🖼️
 
-이 프로젝트는 개인 학습 목적으로 제작되었습니다.
-
----
-
-## 연락처
-
-프로젝트에 대한 문의사항이나 제안사항이 있으시면 이슈를 등록해주세요.
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center;">실행 화면</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <div style="background-color:#f5f5f5; padding:16px; border-radius:16px; display:inline-block;">
+        <img width="960" height="840" alt="image" src="https://github.com/user-attachments/assets/2de35306-9075-4927-b9e7-bba8b15bc25b" style="border-radius:16px;" />
+      </div>
+    </td>
+  </tr>
+</table>
