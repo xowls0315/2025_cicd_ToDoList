@@ -7,13 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model dogs {
-  id    Int    @id @default(autoincrement())
-  name  String @db.VarChar(255)
-  breed String @db.VarChar(255)
-  age   Int
-}
-
 model subtasks {
   id        Int     @id @default(autoincrement())
   title     String  @db.VarChar(200)
